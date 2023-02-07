@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Start page</title>
+    <link th:rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
+</head>
+<body>
+    <h1 id="hello">Hello from spring</h1>
+    <form id="hello-form" method="post" action="hello">
+        <label for="username">User:</label>
+        <input id="username" type="text" name="username"><br/>
+        <label for="userage">Age:</label>
+        <input id="userage" type="number" name="userage">
+        <input id="hello-button" type="submit" value="Say hello" class="btn btn-danger">
+    </form>
+
+    <script th:src="@{/webjars/jquery/3.6.3/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/1.16.1-1/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/5.2.3/js/bootstrap.min.js}"></script>
+</body>
+</html>

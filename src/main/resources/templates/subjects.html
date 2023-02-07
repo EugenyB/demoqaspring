@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Subjects</title>
+    <link th:rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
+</head>
+<body>
+    <table id="subjects" class="table table-dark">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Title</th>
+                <th>Hours</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="subj : ${subjects}">
+                <td th:text="${subj.id}"></td>
+                <td th:text="${subj.title}"></td>
+                <td th:text="${subj.hours}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script th:src="@{/webjars/jquery/3.6.3/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/1.16.1-1/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/5.2.3/js/bootstrap.min.js}"></script>
+</body>
+</html>
